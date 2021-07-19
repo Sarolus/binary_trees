@@ -4,7 +4,8 @@
  * binary_tree_insert_left - Inserts a node as the left-child of another node
  * @parent: parent node.
  * @value: value of the new node.
- * Return: return a pointer to the created node, or NULL on failure or if parent is NULL
+ * Return: return a pointer to the created node, or NULL on failure
+ * or if parent is NULL
  */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 {
@@ -22,7 +23,7 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 
 	if (left->left != NULL)
 		left->left->parent = left;
-	
+
 	parent->left = left;
 
 	return (left);
