@@ -18,8 +18,8 @@ int binary_tree_check_node(const binary_tree_t *tree, int min, int max)
 		return (0);
 
 	return (
-	    isBSTUtil(tree->left, min, tree->n - 1) &&
-	    isBSTUtil(tree->right, tree->n + 1, max));
+	    binary_tree_check_node(tree->left, min, tree->n - 1) &&
+	    binary_tree_check_node(tree->right, tree->n + 1, max));
 }
 
 /**
@@ -33,5 +33,5 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 
-	return (isBSTUtil(tree, INT_MIN, INT_MAX));
+	return (binary_tree_check_node(tree, INT_MIN, INT_MAX));
 }
