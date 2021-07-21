@@ -52,6 +52,7 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 int binary_tree_is_bst(const binary_tree_t *tree);
 int binary_tree_compare_node(const binary_tree_t *tree_l, const binary_tree_t *tree_r);
+bst_t *bst_insert(bst_t **tree, int value);
 
 /* Utility functions */
 void binary_tree_print(const binary_tree_t *tree);
