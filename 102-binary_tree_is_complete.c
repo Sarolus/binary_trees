@@ -9,7 +9,7 @@ int node_count(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
-	
+
 	return (1 + node_count(tree->left) + node_count(tree->right));
 }
 
@@ -24,14 +24,13 @@ int is_complete(const binary_tree_t *tree, int index, int nodeCount)
 {
 	if (tree == NULL)
 		return (1);
-	
+
 	if (index >= nodeCount)
 		return (0);
-	
+
 	return (
-		is_complete(tree->left, 2 * index + 1, nodeCount) &&
-		is_complete(tree->right, 2 * index + 2, nodeCount)
-	);
+	    is_complete(tree->left, 2 * index + 1, nodeCount) &&
+	    is_complete(tree->right, 2 * index + 2, nodeCount));
 }
 
 /**
